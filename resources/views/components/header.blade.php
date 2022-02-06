@@ -185,11 +185,11 @@ button:hover {
   color:#fff;
   background-color:#28a745;
   border-color:#28a745;
-  padding: 7px 10px;
-  margin: 8px 0;
+  padding: 15px;
+  margin: 5px 0 22px 0;
   border: none;
   cursor: pointer;
-  width: 43%;
+  width: 20%;
 }
 
 .success:hover{
@@ -206,6 +206,34 @@ button:hover {
   content: "";
   clear: both;
   display: table;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.delete-alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width: 50%;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 
 </style>
@@ -226,5 +254,4 @@ button:hover {
   <a href="/">Home</a>
   @endif
 
-  <!-- <a href="#" style="float:right">Link</a> -->
 </div>
