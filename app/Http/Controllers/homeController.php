@@ -7,13 +7,11 @@ use App\Models\ShortLink;
 
 class homeController extends Controller
 {
-    function show()
+    public static function show()
     {
         $data = ShortLink::get();
         $count = count($data);
         session()->flash('count', $count);
         return redirect('home');
-
-        // return view('home', ['count'=>$count]);
     }
 }
