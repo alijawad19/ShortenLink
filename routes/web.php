@@ -11,18 +11,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-
-
 Route::view("404", 'errors/404');
 
-// Route::get('login', [CustomAuthController::class, 'index'])->name('login'); 
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
-Route::post('shortenurl', [ShortLinkController::class, 'shortenurl']); 
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
-Route::get('signout', [CustomAuthController::class, 'signOut']);
 
 Route::group(['middleware' => ['protectedPages']], function(){
     Route::get('shortenlink', [ShortLinkController::class,'show']);
+    Route::post('shortenurl', [ShortLinkController::class, 'shortenurl']); 
+    Route::get('edit/{id}', [ShortLinkController::class,'edit']);
+    Route::post('edit', [ShortLinkController::class,'update']);
+    Route::get('delete/{id}', [ShortLinkController::class,'delete']);
+    Route::get('signout', [CustomAuthController::class, 'signOut']);
 });
 
 Route::get('/{code}', [RedirectLinkController::class,'shortenLink']);
