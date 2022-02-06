@@ -200,30 +200,41 @@ ol li {
     transform-origin: left bottom;
 }
 
+.alert {
+  width: 100%;
+}
+
 </style>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card" style="display: flex;">
       <div class="innercard">
-      @if(session('count'))
           <div class="innercolumn">
             <p><i id="tick-mark"></i></p>
             <h3>{{session('count')}}</h3>
             <p>URLs shortened</p>
           </div>
-      @endif
       </div>
       <div class="innercard">
-      
+
             @if ($errors->has('name'))
-            <span class="text-danger">{{ $errors->first('name') }}</span>
+            <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <span>{{ $errors->first('name') }}</span>
+            </div>
             @endif
             @if ($errors->has('email'))
-            <span class="text-danger">{{ $errors->first('email') }}</span>
+            <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <span>{{ $errors->first('email') }}</span>
+            </div>
             @endif
             @if ($errors->has('password'))
-            <span class="text-danger">{{ $errors->first('password') }}</span>
+            <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <span>{{ $errors->first('password') }}</span>
+            </div>
             @endif
 
         <ol>
