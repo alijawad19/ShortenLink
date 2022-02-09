@@ -241,9 +241,10 @@ ol li {
         <h2>Features</h2>
           <li>Sign up and sign in using Auth.</li>
           <li>Table migration.</li>
-          <li>List of all shortened URLs with a box on top to shorten new URL.</li>
+          <li>List of all shortened URLs with a form on top to shorten new URL.</li>
           <li>Shorten new URL and update list without page refresh (Ajax).</li>
           <li>Copy to clipboard button to copy short URL.</li>
+          <li>Edit and customize shortened URL.</li>
           <li>Middleware to verify authenticated user.</li>
         </ol>
 
